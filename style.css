@@ -6,7 +6,6 @@ body {
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    overflow: hidden;
 }
 
 main {
@@ -28,8 +27,10 @@ main {
 
 .image {
     padding: 1rem;
-    width: 200px;
-    height: 200px;
+    /*width: 200px;*/
+    /*height: 200px;*/
+    width: 12rem;
+    height: 12rem;
     border-radius: 50%;
 
     background-image: url("./image.png");
@@ -55,36 +56,4 @@ main {
     width: 50px;
     height: 50px;
     padding: .5rem;
-}
-
-.ribbon {
-    margin: 0;
-    background: dimgrey;
-    padding:.3em 0;
-    position: absolute;
-    top:0;
-    right:0;
-    transform: translateX(30%) translateY(0%) rotate(45deg);
-    transform-origin: top left;
-    font-size: .8rem;
-    font-weight: 400;
-}
-
-.ribbon:before,
-.ribbon:after {
-    content: '';
-    position: absolute;
-    top:0;
-    margin: 0 -1px;
-    width: 100%;
-    height: 100%;
-    background: dimgrey;
-}
-
-.ribbon:before {
-    right:100%;
-}
-
-.ribbon:after {
-    left:100%;
 }
