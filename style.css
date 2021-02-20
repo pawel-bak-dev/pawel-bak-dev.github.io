@@ -1,9 +1,232 @@
+/*INITIAL*/
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
 body {
+    position: relative;
+    height: 100%;
     margin: 0;
     padding: 0;
-
-    background-color: black;
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
 }
+
+/*GRID*/
+body {
+    display: grid;
+    grid-template:
+        "grid-main grid-main" auto
+        "grid-aside grid-aside" auto
+        "grid-footer grid-footer" 30px / 50%
+}
+
+main {
+    grid-area: grid-main;
+}
+
+aside {
+    grid-area: grid-aside;
+}
+
+footer {
+    grid-area: grid-footer;
+}
+
+/*COLORS*/
+.dark-accent {
+    color: #ec4646;
+}
+
+.light-accent {
+    color: #4DBCE9;
+}
+
+/*BASIC*/
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.mr1 {
+     margin-right: 1rem
+}
+
+/*OTHERS*/
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #2E302F;
+    color: #EFF2EB;
+}
+
+main {
+    padding: 2rem;
+}
+
+main header h1 {
+    margin-bottom: .8rem;
+}
+
+main header h3 {
+    margin-top: unset;
+}
+
+.social-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.social {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: .5rem;
+    background-color: #464646;
+    transition: background-color 400ms, transform 400ms;
+}
+
+.social:hover {
+    background-color: #ec4646;
+    transform: scale(0.9);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #464646;
+
+    font-size: .7rem;
+    font-weight: 300;
+}
+
+aside {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.swiper-container {
+    width: 100vw;
+}
+
+.swiper-slide {
+    padding: 2rem;
+}
+
+.swiper-slide-content {
+    background-color: #464646;
+    border-radius: 8px;
+    padding: .5rem 1.5rem;
+
+    -webkit-box-shadow: inset 0px 0px 28px -19px rgba(255,255,255,0.58);
+    -moz-box-shadow: inset 0px 0px 28px -19px rgba(255,255,255,0.58);
+    box-shadow: inset 0px 0px 28px -19px rgba(255,255,255,0.58);
+}
+
+nav.swiper-pagination {
+    display: flex;
+    flex-direction: row;
+    position: unset;
+    padding: 0 10px;
+}
+
+nav.swiper-pagination > .swiper-pagination-bullet {
+    padding: 3px 10px;
+    width: auto;
+    height: unset;
+    border-radius: unset;
+    background-color: unset;
+    font-size: 12px;
+    opacity: .6;
+    text-align: center;
+    transition: color 500ms, opacity 500ms;
+}
+
+nav.swiper-pagination > .swiper-pagination-bullet:hover {
+    color: #ec4646;
+    opacity: 1;
+}
+
+nav.swiper-pagination > .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+button.swiper-button-next, button.swiper-button-prev {
+    background-color: unset;
+    border: unset;
+    color: #EFF2EB;
+    transition: color 500ms;
+}
+
+button.swiper-button-next:hover, button.swiper-button-prev:hover {
+    color: #ec4646;
+}
+
+button.swiper-button-next {
+    right: 0;
+}
+
+button.swiper-button-prev {
+    left: 0;
+}
+
+button.swiper-button-next.swiper-button-disabled, button.swiper-button-prev.swiper-button-disabled {
+    display: none;
+}
+
+button.swiper-button-next::after, button.swiper-button-prev::after {
+    font-size: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        grid-template:
+        "grid-main grid-aside" auto
+        "grid-footer grid-footer" 30px / 50%
+    }
+
+    aside {
+        flex-direction: row;
+    }
+
+    .social-wrapper {
+        margin-top: 4rem;
+        justify-content: flex-start;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: calc(100vh - 40px);
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav.swiper-pagination {
+        flex-direction: column;
+    }
+
+    nav.swiper-pagination > .swiper-pagination-bullet {
+        text-align: right;
+    }
+
+    button.swiper-button-next, button.swiper-button-prev {
+        transform: rotate(90deg);
+    }
+
+    button.swiper-button-next {
+        top: unset;
+        bottom: 0;
+        right: unset;
+        left: 50%;
+    }
+
+    button.swiper-button-prev {
+        top: 15px;
+        left: 50%;
+    }
+}
+

@@ -8,11 +8,145 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Paweł Bąk</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <header>
+        <h1>Hello, I'm <span class="dark-accent">Paweł Bąk</span>.</h1>
+        <h3>I'm a full-stack developer.</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis
+          libero, malesuada quis pretium eget, rhoncus quis felis. Mauris
+          scelerisque vulputate cursus. Proin elementum urna id nunc posuere,
+          mattis auctor urna porttitor. Integer ipsum libero, tempus porttitor
+          diam et, dapibus luctus purus. Cras ut lorem leo. Phasellus blandit
+          ultrices sem, quis aliquam eros iaculis ut.
+        </p>
+      </header>
+      <nav class="social-wrapper">
+        <a href="https://github.com/pawel-bak-dev" target="_blank">
+          <img src="./svg/github-brands.svg" class="social mr1" />
+        </a>
+        <a href="https://linkedin.com/in/pawel-bak-dev" target="_blank">
+          <img src="./svg/linkedin-in-brands.svg" class="social mr1" />
+        </a>
+        <a href="https://www.instagram.com/baqu10/" target="_blank">
+          <img src="./svg/instagram-brands.svg" class="social mr1" />
+        </a>
+        <a href="https://www.instagram.com/baqu10/" target="_blank">
+          <img src="./svg/youtube-brands.svg" class="social" />
+        </a>
+      </nav>
+    </main>
+    <aside>
+      <section class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <article class="swiper-slide-content">
+              <h2>About</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                auctor libero vel nunc iaculis condimentum. In id dolor dictum,
+                blandit sem non, iaculis libero. Aenean viverra auctor mauris,
+                vitae mattis nisi imperdiet sit amet. Quisque pharetra elit
+                libero, sit amet fringilla odio sollicitudin quis. Duis lorem
+                ex, egestas vel facilisis sed, tempor id risus. Suspendisse
+                bibendum ex et leo ullamcorper mollis. Nulla suscipit, felis sit
+                amet scelerisque tincidunt, nunc eros laoreet justo, at
+                hendrerit sapien ipsum quis leo. Ut id porttitor ante. Quisque
+                eleifend molestie lorem non imperdiet. Nullam bibendum augue ut
+                congue elementum. Donec vel posuere neque. Nulla vel imperdiet
+                justo, in condimentum lacus. Phasellus volutpat eros quis
+                viverra auctor.
+              </p>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="swiper-slide-content">
+              <h2>Work</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                auctor libero vel nunc iaculis condimentum. In id dolor dictum,
+                blandit sem non, iaculis libero. Aenean viverra auctor mauris,
+                vitae mattis nisi imperdiet sit amet. Quisque pharetra elit
+                libero, sit amet fringilla odio sollicitudin quis. Duis lorem
+                ex, egestas vel facilisis sed, tempor id risus. Suspendisse
+                bibendum ex et leo ullamcorper mollis. Nulla suscipit, felis sit
+                amet scelerisque tincidunt, nunc eros laoreet justo, at
+                hendrerit sapien ipsum quis leo. Ut id porttitor ante. Quisque
+                eleifend molestie lorem non imperdiet. Nullam bibendum augue ut
+                congue elementum. Donec vel posuere neque. Nulla vel imperdiet
+                justo, in condimentum lacus. Phasellus volutpat eros quis
+                viverra auctor.
+              </p>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="swiper-slide-content">
+              <h2>Contact</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                auctor libero vel nunc iaculis condimentum. In id dolor dictum,
+                blandit sem non, iaculis libero. Aenean viverra auctor mauris,
+                vitae mattis nisi imperdiet sit amet. Quisque pharetra elit
+                libero, sit amet fringilla odio sollicitudin quis. Duis lorem
+                ex, egestas vel facilisis sed, tempor id risus. Suspendisse
+                bibendum ex et leo ullamcorper mollis. Nulla suscipit, felis sit
+                amet scelerisque tincidunt, nunc eros laoreet justo, at
+                hendrerit sapien ipsum quis leo. Ut id porttitor ante. Quisque
+                eleifend molestie lorem non imperdiet. Nullam bibendum augue ut
+                congue elementum. Donec vel posuere neque. Nulla vel imperdiet
+                justo, in condimentum lacus. Phasellus volutpat eros quis
+                viverra auctor.
+              </p>
+            </article>
+          </div>
+        </div>
+        <button class="swiper-button-prev"></button>
+        <button class="swiper-button-next"></button>
+      </section>
+      <nav class="swiper-pagination" />
+    </aside>
+    <footer>PAWEŁ BĄK &nbsp<span class="dark-accent">&copy2021</span></footer>
+
+    <script src="swiper-bundle.min.js"></script>
+    <script>
+      const menu = ["About", "Work", "Contact"];
+
+      const swiper = new Swiper(".swiper-container", {
+        direction: getDirection(),
+        slidesPerView: 1,
+        spaceBetween: 30,
+        speed: 700,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<a class="${className}">${menu[index]}</a>`;
+          },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          resize: function () {
+            swiper.changeDirection(getDirection());
+          },
+        },
+      });
+
+      function getDirection() {
+        return window.innerWidth <= 760 ? "horizontal" : "vertical";
+      }
+    </script>
+  </body>
 </html>
