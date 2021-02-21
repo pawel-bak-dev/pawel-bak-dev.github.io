@@ -12,6 +12,11 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 /*GRID*/
 body {
     display: grid;
