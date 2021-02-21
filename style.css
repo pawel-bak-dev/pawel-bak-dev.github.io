@@ -74,6 +74,7 @@ main header h3 {
 .social-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .social {
@@ -82,11 +83,6 @@ main header h3 {
     padding: .5rem;
     background-color: #464646;
     transition: background-color 400ms, transform 400ms;
-}
-
-.social:hover {
-    background-color: #ec4646;
-    transform: scale(0.9);
 }
 
 footer {
@@ -142,11 +138,6 @@ nav.swiper-pagination > .swiper-pagination-bullet {
     transition: color 500ms, opacity 500ms;
 }
 
-nav.swiper-pagination > .swiper-pagination-bullet:hover {
-    color: #ec4646;
-    opacity: 1;
-}
-
 nav.swiper-pagination > .swiper-pagination-bullet.swiper-pagination-bullet-active {
     opacity: 1;
 }
@@ -156,10 +147,6 @@ button.swiper-button-next, button.swiper-button-prev {
     border: unset;
     color: #EFF2EB;
     transition: color 500ms;
-}
-
-button.swiper-button-next:hover, button.swiper-button-prev:hover {
-    color: #ec4646;
 }
 
 button.swiper-button-next {
@@ -190,8 +177,12 @@ button.swiper-button-next::after, button.swiper-button-prev::after {
     }
 
     .social-wrapper {
-        margin-top: 4rem;
         justify-content: flex-start;
+    }
+
+    .social:hover {
+        background-color: #ec4646;
+        transform: scale(0.9);
     }
 
     .swiper-container {
@@ -213,6 +204,11 @@ button.swiper-button-next::after, button.swiper-button-prev::after {
         text-align: right;
     }
 
+    nav.swiper-pagination > .swiper-pagination-bullet:hover {
+        color: #ec4646;
+        opacity: 1;
+    }
+
     button.swiper-button-next, button.swiper-button-prev {
         transform: rotate(90deg);
     }
@@ -227,6 +223,10 @@ button.swiper-button-next::after, button.swiper-button-prev::after {
     button.swiper-button-prev {
         top: 15px;
         left: 50%;
+    }
+
+    button.swiper-button-next:hover, button.swiper-button-prev:hover {
+        color: #ec4646;
     }
 }
 
